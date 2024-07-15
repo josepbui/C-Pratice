@@ -1,13 +1,13 @@
-//Revert a float Array
+//Revert, sum a float Array. Ex: 29-30, Page 11. 
+//https://app.classkick.com/#/account/assignments/AZC13CsPTj6qIk0qCejcCA/question/AZC13DkmRq-i3DzKXyBVOQ
 
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
 void reverse_array(float a[], int n);
 void print_array(float arr[], int i);
-
+float sum(float ar[], int n);
 int main(){
     
     int n;
@@ -39,8 +39,20 @@ int main(){
     
     print_array(the_array, n);
     
+    cout<<" The sum of all elements is:" <<sum(the_array, n)<<endl;
+    
     return 0;
 }
+float sum(float arr[], int n){
+    
+    float sum=0;
+    
+    for (short i=0; i< n; i++)
+    sum+= arr[i];
+    
+    return sum;
+    
+    }
 
 void print_array(float arr[], int n){
     short i;
