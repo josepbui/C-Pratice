@@ -1,0 +1,61 @@
+//Revert a float Array
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void reverse_array(float a[], int n);
+void print_array(float arr[], int i);
+
+int main(){
+    
+    int n;
+    short i;
+    
+    cout<<"Type the number elements of the float array: ";
+    cin>> n;
+    
+    float a, the_array[n];
+    
+    cout<<"Input the element: "<<endl;
+    for (i=0; i<n; i++){
+        
+        cout<<i+1<<") ";
+        cin>> a;
+        the_array[i] = a;
+           
+    }
+    
+    cout<<"Your input array: ";
+    
+    print_array(the_array, n);
+    
+   
+    reverse_array(&the_array[0], n);  
+    
+  
+    cout<<"\n The reversed array: ";
+    
+    print_array(the_array, n);
+    
+    return 0;
+}
+
+void print_array(float arr[], int n){
+    short i;
+    
+    for (i=0; i<n; i++) cout<<arr[i]<<" ";
+    
+    }
+
+
+void reverse_array(float a[], int n){
+    
+    short i;
+    float temp;
+        
+    for (i=0; i<=n/2; ++i)
+        {temp =a[i]; a[i] = a[n-1-i]; a[n-1-i] = temp;}
+        
+    }
