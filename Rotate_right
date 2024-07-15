@@ -1,0 +1,55 @@
+// Rotate right. Ex 33
+
+#include <iostream>
+using namespace std;
+
+void rotate_right(float arr[], int n);
+void show_array(float arr[], int n);
+
+int main()
+{
+    
+    int n;
+    cout<<" Enter the num of element of your array: "<<endl;
+    cin>>n;
+    
+    float arry[n];
+    
+    cout<<" Enter element: "<<endl;
+    
+    for (short i=0; i<n; i++) {
+        cin>>arry[i];
+        
+        }
+        
+    cout<<" Your array is: "<<endl;
+    
+    show_array(arry, n);
+    
+    rotate_right(arry, n);
+    
+    cout<<"\n After rotate: "<<endl;
+    
+    show_array(arry, n);
+    
+    
+}
+
+void show_array(float arr[], int n){
+    
+    for (short i=0; i<n; i++)
+    cout<<" "<<arr[i];
+    
+    }
+    
+void rotate_right(float arr[], int n){
+    float temp;
+    temp = arr[n-1];
+    
+    for (short i=n-1; i>0; i--)
+    arr[i]=arr[i-1];
+    
+    arr[0] = temp;
+    
+    
+    }
