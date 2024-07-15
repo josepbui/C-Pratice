@@ -1,0 +1,63 @@
+//Shift right
+
+#include <iostream>
+using namespace std;
+
+void rotate_right(float arr[], int n);
+
+void shift_right(float arr[], int left, int right, int distance);
+void show_array(float arr[], int n);
+
+int main()
+{
+    
+    int l,r, dis,n;
+    cout<<" Enter the num of element of your array: "<<endl;
+    cin>>n;
+    
+    float arry[n];
+    
+    cout<<" Enter element: "<<endl;
+    
+    for (short i=0; i<n; i++) {
+        cin>>arry[i];
+        
+        }
+        
+    cout<<" Your array is: "<<endl;
+    
+    show_array(arry, n);
+    
+    cout<<"\n Enter left position: ";
+    cin>>l;
+    
+    cout<<"\n Enter right position: ";
+    cin>>r;
+    
+    cout<<"Enter distance: ";
+    
+    cin>> dis;
+    
+    
+    shift_right(arry,l,r,dis);
+    
+    cout<<"\n After shift right: "<< dis<<" num from "<<l<<" to "<<r<<endl;
+    
+    show_array(arry, n);
+    
+    
+}
+
+void shift_right(float arr[], int left, int right, int distance){
+    for( short i=left; i< right; i++)
+        arr[distance+i] = arr[i];
+    
+    }
+
+void show_array(float arr[], int n){
+    
+    for (short i=0; i<n; i++)
+    cout<<" "<<arr[i];
+    
+    }
+    
