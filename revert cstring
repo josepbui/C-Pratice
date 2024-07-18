@@ -1,0 +1,35 @@
+//revert cstring
+//https://laptrinhcanban.com/cpp/lap-trinh-cpp-co-ban/chuoi-string-trong-cpp/dao-nguoc-chuoi-trong-cpp/
+#include<iostream>
+using namespace std;
+
+/* Tạo hàm đảo ngược chuỗi trong C++*/
+void str_reverse(char str[]) {
+  int lo = 0;
+  int length;
+  length = strlen(str);
+  //for (length = 0; str[length] != '\0' ; length++) {} 
+  cout<< "Length = "<< length<<endl;
+  while ( lo < length ) {
+    --length;
+    char tmp = str[lo];
+    str[lo] = str[length];
+    str[length] = tmp;
+    ++lo;
+  }
+}
+
+int main() {
+    char str[100];
+    
+    /* Nhập chuỗi cần đảo ngược từ bàn phím*/
+    cout << "Nhap chuoi: ";
+    cin >>  str;
+    
+    /* Gọi hàm đảo ngược chuỗi*/
+    str_reverse(str);
+
+    /* In kết quả*/
+    cout << "Chuoi viet nguoc: "<< str;
+    return 0;
+}
