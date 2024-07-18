@@ -1,0 +1,22 @@
+//revert string using function reverse() function in library "algorithm"
+//https://laptrinhcanban.com/cpp/lap-trinh-cpp-co-ban/chuoi-string-trong-cpp/dao-nguoc-chuoi-trong-cpp/
+#include<iostream>
+#include <algorithm>
+#include<string>
+
+using namespace std;
+
+int main() {
+    string str;
+    
+    /* Nhập chuỗi cần đảo ngược từ bàn phím*/
+    cout << "Nhap chuoi: ";
+    cin >>  str;
+    
+    /* Gọi hàm đảo ngược chuỗi*/
+    reverse(str.begin(), str.end());
+
+    /* In kết quả*/
+    cout << "Chuoi viet nguoc: "<< str;
+    return 0;
+}
